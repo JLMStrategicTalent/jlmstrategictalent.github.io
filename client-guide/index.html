@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Client-side Guide - TeamReadr</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link href="../extra.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Client-side Guide";
+    var mkdocs_page_input_path = "client-guide.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> TeamReadr</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../admin-guide/">Admin-side Guide</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Client-side Guide</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#client-dashboard">Client Dashboard</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#sidebar-components">Sidebar Components</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#messages">Messages</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#notes">Notes</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#staffing-timeline">Staffing Timeline</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#orders">Orders</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#pending-candidates">Pending Candidates</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#schedule-interview-action">Schedule Interview Action</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#hire-action">Hire Action</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#ask-action">Ask Action</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#notes-action">Notes Action</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#view-action">View Action</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#save-action">Save Action</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#archive-action">Archive Action</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scheduled-interviews">Scheduled Interviews</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#more-info-action">More Info Action</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#reschedule-action">Reschedule Action</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#hired-candidates">Hired Candidates</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#saved-candidates">Saved Candidates</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#archived-candidates">Archived Candidates</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#orders_1">Orders</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#edit">Edit</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../tech/">Technical Guide</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">TeamReadr</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Client-side Guide</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="client-side-guide">Client-side Guide</h1>
+<blockquote>
+<p>This guide will focus on the client-side of the application.</p>
+</blockquote>
+<h2 id="client-dashboard">Client Dashboard</h2>
+<blockquote>
+<p>All client dashboards follow this layout:</p>
+</blockquote>
+<p><img alt="Client Dashboard" src="../img/client/ClientDashboard.PNG" /></p>
+<h3 id="sidebar-components">Sidebar Components</h3>
+<blockquote>
+<p>The sidebar is divided into the following sections:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Category</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><a href="./#messages">Messages</a></td>
+<td align="left">Displays relevant messages between candidates and clients</td>
+</tr>
+<tr>
+<td align="center"><a href="./#staffing-timelines">Staffing Timelines</a></td>
+<td align="left">Displays time table for which the client wants to hire</td>
+</tr>
+<tr>
+<td align="center"><a href="./#orders">All Orders</a></td>
+<td align="left">Displays all candidate catergorization for all orders</td>
+</tr>
+<tr>
+<td align="center"><a href="./#orders">Orders</a></td>
+<td align="left">Displays candidate categorization for a specific order</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<h4 id="messages">Messages</h4>
+<blockquote>
+<p>The messaging feature is intended to be a "direct" line of communication between the client and the candidate.
+Clients can ask candidate direct questions by clicking the "Ask" button on an individual candidate row:</p>
+</blockquote>
+<p><img alt="Client Ask Button" src="../img/client/ClientAskButton.PNG" /></p>
+<blockquote>
+<p>The button will prompt the following modal:</p>
+</blockquote>
+<p><img alt="Client Ask Modal" src="../img/client/ClientAskModal.PNG" /></p>
+<p>Upon clicking <code>Send</code>, the message will be sent to the candidate and the history of questions/responses will be appended to the <code>Messages</code> section:</p>
+<p><img alt="Client Messages" src="../img/client/ClientMessage.PNG" /></p>
+<hr />
+<h4 id="notes">Notes</h4>
+<blockquote>
+<p>This section lists the history of any notes left by the client on the candidates:</p>
+</blockquote>
+<p><img alt="Client Notes" src="../img/client/ClientNotes.PNG" /></p>
+<blockquote>
+<p>Please refer to the various actions for the candidate types to read further about the notes.</p>
+</blockquote>
+<hr />
+<h4 id="staffing-timeline">Staffing Timeline</h4>
+<blockquote>
+<p>This component is dedicated to creating a timeline for which the client wishes to hire.
+When entering the page for the first time, the client will be prompted to fill out his/her first timeline:</p>
+</blockquote>
+<p><img alt="New Staffing Timeline" src="../img/client/NewStaffingTimeline.PNG" /></p>
+<blockquote>
+<p>The required fields for the timeline are as follows:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Field</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Quarter</td>
+<td align="left">Designated quarter for which the timeline will be set-up</td>
+</tr>
+<tr>
+<td align="center">Start Date</td>
+<td align="left">Date depicting when the hiring will start</td>
+</tr>
+<tr>
+<td align="center">Project Phase</td>
+<td align="left">The phase of the project for the hiring timeline</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p></br></p>
+<blockquote>
+<p>Upon pressing <code>Submit</code>, the new timeline will be rendered on a table:</p>
+</blockquote>
+<p><img alt="Staffing Timeline" src="../img/client/StaffingTimeline.PNG" /></p>
+<blockquote>
+<p>Clicking the Eye-icon will open a detailed modal for all the timelines created by the client:</p>
+</blockquote>
+<p><img alt="Complete Staffing Timeline" src="../img/client/CompleteStaffingTimeline.PNG" /></p>
+<blockquote>
+<p>Clicking <code>Edit</code> will allow the client to edit, add, or remove specific positions:</p>
+</blockquote>
+<p><img alt="Staffing Timeline Edit" src="../img/client/StaffingTimelineEdit.PNG" /></p>
+<hr />
+<h4 id="orders">Orders</h4>
+<p>The orders display are broken down into two distinct ways of viewing:</p>
+<ul>
+<li>All Orders</li>
+<li>Single Order</li>
+</ul>
+
+<blockquote>
+<p><u>All Orders</u> consolidates all of the candidates and categories for each order and sum them up in a single page.
+One main distinction would be that the <u>All Orders</u> page include the <code>Suggested</code> candidates section, which are candidates that do not belong to any particular order.</p>
+<p>The cadndiate categorization within each order consists of the following:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Category</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><a href="./#pending-candidates">Pending</a></td>
+<td align="left">Candidates that have been associated</td>
+</tr>
+<tr>
+<td align="center"><a href="./#scheduled-interviews">Scheduled</a></td>
+<td align="left">Candidates whose interviews have been requested/scheduled</td>
+</tr>
+<tr>
+<td align="center"><a href="./#hired-candidates">Hired</a></td>
+<td align="left">Candidates that have been hired/pending hire</td>
+</tr>
+<tr>
+<td align="center"><a href="./#saved-candidates">Saved</a></td>
+<td align="left">Candidates that the client decided to save for later</td>
+</tr>
+<tr>
+<td align="center"><a href="./#archived-candidates">Archived</a></td>
+<td align="left">Candidates that the client is not interested in</td>
+</tr>
+</tbody>
+</table>
+<p></br></p>
+<p>Please refer to the respective sections for each of the categories.</p>
+</blockquote>
+<hr />
+<h3 id="pending-candidates">Pending Candidates</h3>
+<blockquote>
+<p>The pending candidates represent the list of candidates that have been associated with the project/order and are pending action from the client:</p>
+</blockquote>
+<p><img alt="Pending Candidates" src="../img/client/PendingCandidates.PNG" /></p>
+<p>There are list of actions that become visible when any of the candidate rows are clicked:</p>
+<p><img alt="Pending Actions" src="../img/client/PendingActions.PNG" /></p>
+<blockquote>
+<p>The possible actions include:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Action</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Interview</td>
+<td align="left">Schedules an interview with the candidate and moves them to the <a href="./#scheduled-interviews">Scheduled Interviews</a> section</td>
+</tr>
+<tr>
+<td align="center">Hire</td>
+<td align="left">Hires the candidate and moves them to the <a href="./#hired-candidates">Hired</a> section</td>
+</tr>
+<tr>
+<td align="center">Ask</td>
+<td align="left">Allows client to prompt a question directly to the candidate. The history of candidate-client interaction will be saved in the <a href="./#messages">Messages</a> section</td>
+</tr>
+<tr>
+<td align="center">Notes</td>
+<td align="left">Allows the client to leave notes on the candidate</td>
+</tr>
+<tr>
+<td align="center">View</td>
+<td align="left">Loads the candidate's profile</td>
+</tr>
+<tr>
+<td align="center">Save</td>
+<td align="left">Keeps the candidate associated and moves them to the <a href="./#saved-candidates">Saved</a> section</td>
+</tr>
+<tr>
+<td align="center">Archive</td>
+<td align="left">Removes the candidate from interactivity and moves them to the <a href="./#archived-candidates">Archived Candidates</a> section</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<hr />
+<h4 id="schedule-interview-action"><u>Schedule Interview Action</u></h4>
+<blockquote>
+<p>Pressing the <code>Interview</code> button opens the following modal:</p>
+</blockquote>
+<p><img alt="Client Interview Options" src="../img/client/ClientInterviewOptions.PNG" /></p>
+<blockquote>
+<p>Selecting one of the interview types will dynamically generate the approrpriate form to accommodate the type of interview.</p>
+<p>Regardless of the option selected, the following part of the form will always render:</p>
+</blockquote>
+<p><img alt="General Interview Form" src="../img/client/GeneralInterviewForm.PNG" /></p>
+<blockquote>
+<p>The main differences between the sections are highlighted as follows:</p>
+</blockquote>
+<h5 id="in-person-interview">In-Person Interview</h5>
+<blockquote>
+<p>In-Person Interview option will render the location fields:</p>
+</blockquote>
+<p><img alt="Interview Location Fields" src="../img/client/InterviewLocationFields.PNG" /></p>
+<h5 id="phone-interview">Phone Interview</h5>
+<blockquote>
+<p>In-Person Interview option will render the phone screen preference options:</p>
+</blockquote>
+<p><img alt="Phone Screen Preferences" src="../img/client/PhoneScreenPreference.PNG" /></p>
+<h5 id="zoom-interview">Zoom Interview</h5>
+<blockquote>
+<p>Zoom Interview option will only render the general interview form but it will make an API call to schedule a meeting through Zoom directly.</p>
+</blockquote>
+<hr />
+<blockquote>
+<p>Through any of the above interview options, the candidate will receive the following view in their email:</p>
+</blockquote>
+<p><img alt="Candidate Interview Calendar" src="../img/client/CandidateInterviewCalendar.PNG" /></p>
+<blockquote>
+<p>The (i) Icon indicates the date chosen by the client and the candidate will be prompted to select one of those times.</p>
+<p>As shown in the image, there is a <code>Reschedule</code> button which will prompt the client to choose a different time for the interview.</p>
+</blockquote>
+<hr />
+<h4 id="hire-action"><u>Hire Action</u></h4>
+<blockquote>
+<p>Pressing the <code>Hire</code> button opens the following modal:</p>
+</blockquote>
+<p><img alt="Hire Options" src="../img/client/HireOptions.PNG" /></p>
+<blockquote>
+<p>The fields dynamically render depending on the option chosen.</p>
+<p><u>Contract / Contract-To-Hire</u></p>
+</blockquote>
+<p><img alt="Contract Hire" src="../img/client/ContractHireModal.PNG" /></p>
+<blockquote>
+<p><u>Direct Hire</u></p>
+</blockquote>
+<p><img alt="Direct Hire" src="../img/client/DirectHireModal.PNG" /></p>
+<hr />
+<h4 id="ask-action"><u>Ask Action</u></h4>
+<blockquote>
+<p>The <code>Ask</code> button prompts a modal that allows clients to directly ask questions to the selected candidate.</p>
+</blockquote>
+<p>Please see the <a href="./#messages">Messages</a> section for how this action works.</p>
+<hr />
+<h4 id="notes-action"><u>Notes Action</u></h4>
+<blockquote>
+<p>The <code>Notes</code> buttton prompts a modal that allows clients to leave notes about the selected candidates</p>
+</blockquote>
+<p><img alt="Note Action Modal" src="../img/client/NoteActionModal.PNG" /></p>
+<blockquote>
+<p>Upon writing the notes and clicking the <code>Submit</code> button, the note will become available as part of the modal:</p>
+</blockquote>
+<p><img alt="Updated Notes" src="../img/client/UpdatedNotes.PNG" /></p>
+<blockquote>
+<p>The note will also become visible in the <a href="./#notes">Notes</a> section.</p>
+</blockquote>
+<hr />
+<h4 id="view-action"><u>View Action</u></h4>
+<blockquote>
+<p>This action loads the candidate's profile based on the candidate's various information within TeamBldr:</p>
+</blockquote>
+<p><img alt="Candidate Profile" src="../img/client/CandidateProfile.PNG" /></p>
+<hr />
+<h4 id="save-action"><u>Save Action</u></h4>
+<blockquote>
+<p>This action indicates that the client is interested in the candidate, but not at this time. These candidates will be housed in the <a href="./#saved-candidates">Saved Candidates</a> section.</p>
+</blockquote>
+<hr />
+<h4 id="archive-action"><u>Archive Action</u></h4>
+<blockquote>
+<p>This action indicates that the client is not interested in the candidates. The action opens the following modal:</p>
+</blockquote>
+<p><img alt="Not Interested Modal" src="../img/client/NotInterestedModal.PNG" /></p>
+<blockquote>
+<p>Initiating this action requires a reason for archiving and also prompts a textbox for additional comments.</p>
+<p>Archive reasons are displayed as follows:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Field</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Not enough relevant experience</td>
+</tr>
+<tr>
+<td align="center">Not enough years of experience</td>
+</tr>
+<tr>
+<td align="center">Bill rate too high</td>
+</tr>
+<tr>
+<td align="center">Missing certification</td>
+</tr>
+<tr>
+<td align="center">Other</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p></br></p>
+<blockquote>
+<p>Upon submitting the form, the candidate is moved to the <a href="./#archived-candidates">Archived Candidates</a> section.</p>
+</blockquote>
+<hr />
+<h3 id="scheduled-interviews">Scheduled Interviews</h3>
+<p><img alt="Scheduled Interviews" src="../img/client/ScheduledInterviews.PNG" /></p>
+<blockquote>
+<p>The candidates in the scheduled interviews mean that their interview have been scheduled or is pending confirmation on the interview.</p>
+<p>The available actions within this section include:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Action</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">More Info</td>
+<td align="left">Loads additional information regarding the scheduled interview for the selected candidate</td>
+</tr>
+<tr>
+<td align="center">Reschedule</td>
+<td align="left">Re-prompts the same <a href="./#schedule-interview-action">Schedule Interview</a> action</td>
+</tr>
+<tr>
+<td align="center">Hire</td>
+<td align="left">Hires the candidate and moves them to the <a href="./#hired-candidates">Hired</a> section</td>
+</tr>
+<tr>
+<td align="center">Ask</td>
+<td align="left">Allows the client to ask questions directly to the candidate</td>
+</tr>
+<tr>
+<td align="center">Notes</td>
+<td align="left">Allows the client to ask questions directly to the candidate</td>
+</tr>
+<tr>
+<td align="center">View</td>
+<td align="left">Loads the candidate's profile</td>
+</tr>
+<tr>
+<td align="center">Archive</td>
+<td align="left">Removes the candidate from interactivity and moves them to the <a href="./#archived-candidates">Archived Candidates</a> section</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p></br></p>
+<blockquote>
+<p>The <a href="./#hire-action"><code>Hire</code></a>, <a href="./#view-profile-action"><code>View</code></a>, <a href="./#messages"><code>Ask</code></a>, <a href="./#notes"><code>Notes</code></a> and <a href="./#not-interested-action"><code>Archive</code></a> actions are identical to the respective actions laid out above.</p>
+</blockquote>
+<h4 id="more-info-action"><u>More Info Action</u></h4>
+<blockquote>
+<p>Clicking the <code>More Info</code> action will open a side-tab that displays the following image:</p>
+</blockquote>
+<p><img alt="More Info Action" src="../img/client/MoreInfoAction.PNG" /></p>
+<blockquote>
+<p>Note that the interviewers information can be edited, either to correct the information for the inputted interviewers or to add or remove any interviewers.</p>
+</blockquote>
+<hr />
+<h4 id="reschedule-action"><u>Reschedule Action</u></h4>
+<blockquote>
+<p>The <code>Reschedule</code> option will have the same format and layout as the <a href="./#schedule-interview-action"><code>Schedule</code></a> and will simply update the dates and information based on the new inputs.</p>
+</blockquote>
+<hr />
+<h3 id="hired-candidates">Hired Candidates</h3>
+<blockquote>
+<p>This tab houses all the candidates that have been hired:</p>
+</blockquote>
+<p><img alt="Hired Candidates" src="../img/client/HiredCandidates.PNG" /></p>
+<blockquote>
+<p>Clicking the <code>Modify</code> button will open the same modal as the <a href="./#hire-action">Hire Action</a> and prompt the client to fill out different information for hiring.</p>
+</blockquote>
+<hr />
+<h3 id="saved-candidates">Saved Candidates</h3>
+<blockquote>
+<p>This tab houses all the candidates that have been saved as a result of the <a href="./#save-for-later-action">Save For Later</a> action.</p>
+<p>The actions available are identical to those of the <a href="./#pending-candidates">Pending Candidates</a> section:</p>
+<p><img alt="Saved Candidates" src="../img/client/SavedCandidates.PNG" /></p>
+</blockquote>
+<hr />
+<h3 id="archived-candidates">Archived Candidates</h3>
+<blockquote>
+<p>This tab houses all the candidates that have been archived as a result of the <a href="./#not-interested-action">Archive</a> action:</p>
+<p><img alt="Archived Candidates" src="../img/client/ArchivedCandidates.PNG" /></p>
+<p>This tab has an additional field called <code>View Feedback</code> which displays the reason and comments related to the candidate's archival:</p>
+<p><img alt="Archive Feedback" src="../img/client/ArchiveFeedBack.PNG" /></p>
+</blockquote>
+<hr />
+<h2 id="orders_1">Orders</h2>
+<blockquote>
+<p><code>Orders</code> are specific positions that the clients want filled. They request an "order" from us and we attempt to fill them.</p>
+<p>Orders can be created by pressing the <code>New Order</code> button on top of the sidebar:</p>
+<p><img alt="Client New Order" src="../img/client/ClientNewOrder.PNG" /></p>
+<p>Clicking the button will take you to the order creation page:</p>
+<p><img alt="Client Order Creation" src="../img/client/ClientOrderCreation.PNG" /></p>
+<p>Although this is the default list-page, we recommend pressing the <code>Detailed View</code> button at the bottom of the page. Doing so will navigate to the following page:</p>
+<p><img alt="Client Order Creation Detail" src="../img/client/ClientOrderCreationDetail.PNG" /></p>
+<p>The available fields for creating an order are as follows:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Field</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Position</td>
+<td align="left">Position</td>
+</tr>
+<tr>
+<td align="center">Position Type</td>
+<td align="left">Type of position</td>
+</tr>
+<tr>
+<td align="center">Description</td>
+<td align="left">General responsibilities and requirements</td>
+</tr>
+<tr>
+<td align="center">Education</td>
+<td align="left">Degree level desired</td>
+</tr>
+<tr>
+<td align="center">Experience</td>
+<td align="left">Years of experience</td>
+</tr>
+<tr>
+<td align="center">Yearly Budget</td>
+<td align="left">Yearly budget required</td>
+</tr>
+<tr>
+<td align="center">Employment Type</td>
+<td align="left">Type of project</td>
+</tr>
+<tr>
+<td align="center">Deadline</td>
+<td align="left">Due date for when the order should ideally be filled</td>
+</tr>
+<tr>
+<td align="center">Assignment Length</td>
+<td align="left">Duration of the position</td>
+</tr>
+<tr>
+<td align="center">Required Skills</td>
+<td align="left">List of skills required for the position</td>
+</tr>
+<tr>
+<td align="center">Preferred Skills</td>
+<td align="left">List of skills preferred for the position</td>
+</tr>
+<tr>
+<td align="center">Required Certification</td>
+<td align="left">List of certifications required for the position</td>
+</tr>
+<tr>
+<td align="center">Preferred Certification</td>
+<td align="left">List of certifications preferred for the position</td>
+</tr>
+</tbody>
+</table>
+<p></br></p>
+<p>Note that filling in the position with one of the drop-down choices will <em>auto-populate</em> majority of the fields.</p>
+<p>Once an order has been created, you can go through the same workflow as the sections highlighted in the general <a href="./#client-dashboard">Client Dashboard</a> section.</p>
+</blockquote>
+<hr />
+<h3 id="edit">Edit</h3>
+<blockquote>
+<p>If you as an administrator or a client want to change the details of an order, going into that order on the client-side bar will now include a new top-option called <code>Order Details</code>:</p>
+<p><img alt="Order Details" src="../img/client/ClientOrderDetails.PNG" /></p>
+<p>Clicking the button will navigate you to the following page:</p>
+<p><img alt="Order Specific Order Details" src="../img/client/ClientSpecificOrderDetails.PNG" /></p>
+<p>This is the page in which you can view as well as edit the order by pressing <code>Edit Order</code> button.</p>
+</blockquote>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../tech/" class="btn btn-neutral float-right" title="Technical Guide">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../admin-guide/" class="btn btn-neutral" title="Admin-side Guide"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../admin-guide/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../tech/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

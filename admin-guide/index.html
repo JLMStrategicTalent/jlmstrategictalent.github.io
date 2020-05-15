@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Admin-side Guide - TeamReadr</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link href="../extra.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Admin-side Guide";
+    var mkdocs_page_input_path = "admin-guide.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> TeamReadr</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Admin-side Guide</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#home-page">Home Page</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#login-page">Login Page</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#admin-dashboard">Admin Dashboard</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#search-bar">Search Bar</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#sidebar">Sidebar</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#candidates">Candidates</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#projects">Projects</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#notes">Notes</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#interviews">Interviews</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#hires">Hires</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#log-out">Log Out</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#candidates_1">Candidates</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#creation">Creation</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#edit-page">Edit Page</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#user-information">User Information</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#profile-information">Profile Information</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#work-experience">Work Experience</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#candidate-projects">Candidate-Projects</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#education">Education</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#notes_1">Notes</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#assigned-projects">Assigned Projects</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#questions">Questions</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#logs">Logs</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#profile">Profile</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#projects_1">Projects</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#candidates_2">Candidates</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#project-information">Project Information</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#point-of-contact">Point of Contact</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#orders">Orders</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#logs_1">Logs</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#project-dashboard">Project Dashboard</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#association">Association</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../client-guide/">Client-side Guide</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../tech/">Technical Guide</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">TeamReadr</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Admin-side Guide</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="admin-side-guide">Admin-side Guide</h1>
+<p><i>*If you're looking for a guide for developers, check out the <a href="../tech/">Technical Guide</a>.</i></p>
+<h2 id="home-page">Home Page</h2>
+<blockquote>
+<p>Upon navigating to the <a href="https://www.profiles.jlmstrategic.com">Teambldr</a> website, you will see the following view:</p>
+<p><img alt="Landing Page" src="../img/admin/LandingPage.PNG" /></p>
+<p>You can look through the several core features of TeamBldr and navigate to the login page by clicking the "Log in" button.</p>
+</blockquote>
+<hr />
+<h2 id="login-page">Login Page</h2>
+<blockquote>
+<p><img alt="Login" src="../img/admin/Login.PNG" /></p>
+<p><i>Note that the credentials are <u>case-sensitive</u><i></p>
+</blockquote>
+<hr />
+<h2 id="admin-dashboard">Admin Dashboard</h2>
+<blockquote>
+<p>Most of the functionalities and navigations will be in the Admin Dashboard. There are several components embedded as a sub-section in this component, which will be broken down to the <a href="./#search-bar">Search Bar</a> and the <a href="./#sidebar">Sidebar</a> components. Below is the image overview of the admin dashboard:</p>
+<p><img alt="Dashboard" src="../img/admin/CandidateDashboard.PNG" /></p>
+</blockquote>
+<hr />
+<h3 id="search-bar">Search Bar</h3>
+<blockquote>
+<p>There is a search bar for the candidates dashboard:</p>
+<p><img alt="SearchBar" src="../img/admin/CandidateSearchBar.PNG" /></p>
+<p>There is a tooltip denoted by the <code>?</code> next to the search bar that further elaborates the inclusion of the search, which include:</p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">MPC</td>
+</tr>
+<tr>
+<td align="center">Candidate Name</td>
+</tr>
+<tr>
+<td align="center">Candidate Position</td>
+</tr>
+<tr>
+<td align="center">Candidate Location</td>
+</tr>
+<tr>
+<td align="center">Profile Completion (Complete or Incomplete)</td>
+</tr>
+<tr>
+<td align="center">Candidate Status (Active, Inactive, or Unavailable)</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p></br></p>
+<blockquote>
+<p>The <strong>Reset</strong> button will reset the current search query and return all candidates for that specific section.</p>
+</blockquote>
+<hr />
+<h3 id="sidebar">Sidebar</h3>
+<blockquote>
+<p>The sidebar consists of the following list of tabs:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Tab</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Candidates</td>
+<td align="left">Table with all candidates with categorization</td>
+</tr>
+<tr>
+<td align="center">Projects</td>
+<td align="left">Table with all projects with categorization</td>
+</tr>
+<tr>
+<td align="center">Notes</td>
+<td align="left">Table with all notes for candidates</td>
+</tr>
+<tr>
+<td align="center">Interviews</td>
+<td align="left">List of all requested and scheduled interviews</td>
+</tr>
+<tr>
+<td align="center">Hires</td>
+<td align="left">List of all pending/completed hires</td>
+</tr>
+<tr>
+<td align="center">Log Out</td>
+<td align="left">Button to prompt log out</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<h4 id="candidates">Candidates</h4>
+<blockquote>
+<p>The <code>Candidates</code> tab contains a table that displays all the candidates in their own category. The categories are defined as follows:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Category</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Top</td>
+<td align="left">Top-line candidates</td>
+</tr>
+<tr>
+<td align="center">Industry</td>
+<td align="left">Candidates with experience in the construction/infrastructure industry</td>
+</tr>
+<tr>
+<td align="center">General</td>
+<td align="left">Majority of candidates that end up in the application</td>
+</tr>
+<tr>
+<td align="center">Visa</td>
+<td align="left">Candidates that are on visa or require sponsorship</td>
+</tr>
+<tr>
+<td align="center">Do Not Use (DNU)</td>
+<td align="left">Candidates that should not be used (based on red flags)</td>
+</tr>
+</tbody>
+</table>
+<p>The candidate table will render the candidates in the selected category-tab.</p>
+<p>Additionally, you can interact with each candidates in the table; you can leave notes for a candidate, view their profile, <a href="./#edit-page">edit</a> their information, or delete them.</p>
+<p>For the full list of candidate interactivity, see the <a href="./#candidates_1">Candidates</a> section</p>
+</blockquote>
+<hr />
+<h4 id="projects">Projects</h4>
+<blockquote>
+<p>The <code>Projects</code> tab contains a table that displays all the projects among its categories:</p>
+<p><img alt="Projects" src="../img/admin/AdminProjects.PNG" /></p>
+<p>The categories are defined as follows:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Category</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Active</td>
+<td align="left">Projects that we are actively working with</td>
+</tr>
+<tr>
+<td align="center">Inactive</td>
+<td align="left">Projects that we are not actively working with</td>
+</tr>
+<tr>
+<td align="center">Demo</td>
+<td align="left">Projects pending demo for TeamBldr</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p></br></p>
+<blockquote>
+<p>Detailed information about the projects can be found in the <a href="./#projects_1">Project</a> section.</p>
+</blockquote>
+<hr />
+<h4 id="notes">Notes</h4>
+<blockquote>
+<p>The <code>Notes</code> tab contains a table that displays all the notes written for the candidates within the application, in the descending order of creation.</p>
+<p><img alt="Notes" src="../img/admin/Notes.PNG" /></p>
+<p>Detailed information about notes can be found in the <a href="./#notes_2">Notes</a> section.</p>
+</blockquote>
+<hr />
+<h4 id="interviews">Interviews</h4>
+<blockquote>
+<p>The <code>Interviews</code> tab is divided into two sections:</p>
+</blockquote>
+<ul>
+<li><code>Requested</code>: List of all interviews requested by the client</li>
+</ul>
+<blockquote>
+<p><img alt="RequestedInterviews" src="../img/admin/RequestedInterviews.PNG" /></p>
+<p>You can click the "Confirm Interview" button to select the interview time and confirm the interview for both the candidate and the client.</p>
+<p><img alt="InterviewConfirmModal" src="../img/admin/InterviewConfirmModal.PNG" /></p>
+</blockquote>
+<ul>
+<li><code>Scheduled</code>: List of all interviews shceduled and confirmed</li>
+</ul>
+<blockquote>
+<p><img alt="ScheduledInterviews" src="../img/admin/ScheduledInterviews.PNG" /></p>
+<p>You can also select the <code>Past</code> tab to see the previously scheduled interviews.</p>
+<p><img alt="PastInterviews" src="../img/admin/PastInterviews.PNG" /></p>
+</blockquote>
+<hr />
+<h4 id="hires">Hires</h4>
+<blockquote>
+<p>The <code>Hire</code> tab contains a table that displays all hired candidates.</p>
+<p><img alt="HireTab" src="../img/admin/HireTab.PNG" /></p>
+<p>You can click the <code>View Details</code> button to see additional information about the hire:</p>
+<p><img alt="HireDetail" src="../img/admin/HireDetail.PNG" /></p>
+</blockquote>
+<hr />
+<h4 id="log-out">Log Out</h4>
+<blockquote>
+<p>The <code>Log Out</code> tab exits your current session:</p>
+<p><img alt="SideBarLogout" src="../img/admin/SideBarLogout.PNG" /></p>
+</blockquote>
+<hr />
+<!-- Candidates Section -->
+
+<h2 id="candidates_1">Candidates</h2>
+<blockquote>
+<p>Candidates are one of the quinessential entities within the application. This section will break down all possible interactions with candidates.</p>
+</blockquote>
+<h3 id="creation">Creation</h3>
+<blockquote>
+<p>Candidates are created in two different ways:</p>
+<ul>
+<li>Candidate-side application</li>
+<li>Admin-side creation</li>
+</ul>
+<p><strong>Candidate-side</strong> application is when the candidates themselves provide the information necessary to create their own candidate object within TeamBldr. The URL for this type of creation can be found <a href="https://www.profiles.jlmstrategic.com/partial">here</a>.</p>
+<p>As of the current version of this documentation, candidates are directed to the creation page automatically when the Business Analysts qualify the candidates on Workable.</p>
+<p><strong>Admin-side</strong> creation is when an administrator within the application clicks the <code>New Profile</code> button at the bottom left of the candidate dashboard. Doing so will prompt the admin to fill out a few fields:</p>
+<p><img alt="AdminCreate" src="../img/admin/AdminCreate.PNG" /></p>
+<p>The completion of either applications will register that candidate to be used throughout the website.</p>
+</blockquote>
+<hr />
+<h3 id="edit-page">Edit Page</h3>
+<blockquote>
+<p>In the <a href="./#candidates">Candidates</a> section of the sidebar, you can view individual rows of candidates, each also accompanied by the <code>Edit</code> button to the right of the table:</p>
+<p><img alt="Candidate Edit Button" src="../img/admin/CandidateRow.PNG" /></p>
+<p>Clicking the button will navigate you to the candidate's edit page:</p>
+<p><img alt="Candidate Edit Page" src="../img/admin/CandidateEdit.PNG" /></p>
+</blockquote>
+<hr />
+<h4 id="user-information">User Information</h4>
+<blockquote>
+<p>The above image is the <code>User Information</code> section. This page holds several fields that are specific to the candidate:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Field</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">First Name</td>
+<td align="left">First name of the candidate</td>
+</tr>
+<tr>
+<td align="center">Last Name</td>
+<td align="left">Last name of the candidate</td>
+</tr>
+<tr>
+<td align="center">Email</td>
+<td align="left">Email of the candidate</td>
+</tr>
+<tr>
+<td align="center">Phone Number</td>
+<td align="left">Phone number of the candidate</td>
+</tr>
+<tr>
+<td align="center">City/State</td>
+<td align="left">The "current" city and state candidate is located in</td>
+</tr>
+<tr>
+<td align="center">Work Authorization</td>
+<td align="left">Candidate's work authorization status</td>
+</tr>
+<tr>
+<td align="center">Willing to Relocate</td>
+<td align="left">Candidate's willingness to relocate</td>
+</tr>
+<tr>
+<td align="center">Category</td>
+<td align="left">Candidate's <a href="./#candidates">Category</a></td>
+</tr>
+<tr>
+<td align="center">Status</td>
+<td align="left">Candidate's status, whether they're active or not</td>
+</tr>
+</tbody>
+</table>
+<p>All of these fields become editable once you click the <code>Edit</code> button at the top right.</p>
+</blockquote>
+<hr />
+<h4 id="profile-information">Profile Information</h4>
+<blockquote>
+<p>The next tab over, you have the <code>Profile</code> edit page:</p>
+<p><img alt="Candidate Profile Edit" src="../img/admin/CandidateProfileEdit.PNG" /></p>
+<table>
+<thead>
+<tr>
+<th align="center">Field</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Desired Pay</td>
+<td align="left">Pay rate of the candidate, set as a range</td>
+</tr>
+<tr>
+<td align="center">Skills*</td>
+<td align="left">List of candidate's skills</td>
+</tr>
+<tr>
+<td align="center">MPC</td>
+<td align="left">The summary of the candidate's skills/experiences</td>
+</tr>
+<tr>
+<td align="center">Certifications*</td>
+<td align="left">List of candidate's certifications</td>
+</tr>
+<tr>
+<td align="center">Years of Experience</td>
+<td align="left">Candidate's numerical years of experience</td>
+</tr>
+<tr>
+<td align="center">Position Type</td>
+<td align="left">Candidate's type of position</td>
+</tr>
+<tr>
+<td align="center">Position</td>
+<td align="left">Candidate's title</td>
+</tr>
+<tr>
+<td align="center">Red Flags</td>
+<td align="left">Candidate's red flags indicating one's potential inability to be placed</td>
+</tr>
+<tr>
+<td align="center">Resume**</td>
+<td align="left">Candidate's attached resume</td>
+</tr>
+</tbody>
+</table>
+<p>*Skills and certifications can be filled out as a comma-separated list (e.g skill1,skill2).</p>
+<p>**Uploading a new resume for the candidate will <strong>replace</strong> the candidate's current resume.</p>
+</blockquote>
+<hr />
+<h4 id="work-experience">Work Experience</h4>
+<blockquote>
+<p>The <code>Work Experience</code> tab contains the list of candidate's work experiences:</p>
+<p><img alt="Candidate Work Experience Edit" src="../img/admin/CandidateWorkExperienceEdit.PNG" /></p>
+<p>For each listed experience, you will find:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Field</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Company</td>
+<td align="left">Name of the company</td>
+</tr>
+<tr>
+<td align="center">Title</td>
+<td align="left">Candidate's title at the company</td>
+</tr>
+<tr>
+<td align="center">Description</td>
+<td align="left">Candidate's list of work experience description</td>
+</tr>
+<tr>
+<td align="center">Start Date/End Date</td>
+<td align="left">Start and end date at the company</td>
+</tr>
+<tr>
+<td align="center">City/State</td>
+<td align="left">City and state of the company</td>
+</tr>
+</tbody>
+</table>
+<p></br>
+Upon clicking the <code>Edit</code> button, you will see the option to:</p>
+<ol>
+<li>
+<p>Remove any work experience</p>
+</li>
+<li>
+<p>Add additional work experiences</p>
+</li>
+</ol>
+<p><img alt="Candidate Edit Work Experience Toggled" src="../img/admin/WorkExperienceEditToggle.PNG" /></p>
+</blockquote>
+<hr />
+<h4 id="candidate-projects">Candidate-Projects</h4>
+<blockquote>
+<p>Similar to the Work Experience, project tab contains any projects the candidate might have done or contributed to:</p>
+<p><img alt="Candidate Project Edit" src="../img/admin/CandidateProjectTab.PNG" /></p>
+<p>The fields are very similar to a work experience:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Field</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Company</td>
+<td align="left">Name of the company (if any)</td>
+</tr>
+<tr>
+<td align="center">Role</td>
+<td align="left">Candidate's role for the project</td>
+</tr>
+<tr>
+<td align="center">Description</td>
+<td align="left">Candidate's list of project descriptions</td>
+</tr>
+<tr>
+<td align="center">Start Date/End Date</td>
+<td align="left">Start and end date of the project</td>
+</tr>
+<tr>
+<td align="center">City</td>
+<td align="left">City in which the project took place</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<hr />
+<h4 id="education">Education</h4>
+<blockquote>
+<p>The education tab contains any and all education for the candidate:</p>
+<p><img alt="Candidate Education Edit" src="../img/admin/CandidateEducationEdit.PNG" /></p>
+<p>The fields are as follows:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Field</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Institution</td>
+<td align="left">Name of the institution</td>
+</tr>
+<tr>
+<td align="center">Major</td>
+<td align="left">Candidate's major at the institution</td>
+</tr>
+<tr>
+<td align="center">Degree</td>
+<td align="left">Degree attained at the institution</td>
+</tr>
+<tr>
+<td align="center">Start Date/End Date</td>
+<td align="left">Candidate's start and end date at the institution</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p></br></p>
+<blockquote>
+<p>Similar to the work experience and the projects, pressing the <code>Edit</code> button allows the admin to <code>add</code> additional education fields or <code>remove</code> them.</p>
+</blockquote>
+<hr />
+<h4 id="notes_1">Notes</h4>
+<blockquote>
+<p>The notes tab contains all the notes left about the selected candidate:</p>
+<p><img alt="Candidate Note Edit" src="../img/admin/CandidateNoteTab.PNG" /></p>
+<p>The display table has the following fields:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Field</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Author</td>
+<td align="left">Author of the note (admin)</td>
+</tr>
+<tr>
+<td align="center">Description</td>
+<td align="left">Candidate's major at the institution</td>
+</tr>
+<tr>
+<td align="center">Action</td>
+<td align="left">Degree attained at the institution</td>
+</tr>
+<tr>
+<td align="center">Date Created</td>
+<td align="left">Candidate's start and end date at the institution</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p></br></p>
+<blockquote>
+<p>Clicking the <code>Edit</code> button for a note will prompt the following pop-up:</p>
+<p><img alt="Note Edit Modal" src="../img/admin/NoteEditModal.PNG" /></p>
+<p>In this modal, you can edit the description and the action of the note. Note that the <code>Action</code> section is a mini-picker, meaning multiple actions can be chosen for one note.</p>
+<p>There are following options available for the Actions:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Field</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Inbound Call</td>
+<td align="left">Call that came <strong>from</strong> the candidate</td>
+</tr>
+<tr>
+<td align="center">Outbound Call</td>
+<td align="left">Call being made <strong>to</strong> the candidate</td>
+</tr>
+<tr>
+<td align="center">Left VM</td>
+<td align="left">Leaving voice mail for candidate</td>
+</tr>
+<tr>
+<td align="center">Phone Screen</td>
+<td align="left">Action noted after a phone screen</td>
+</tr>
+<tr>
+<td align="center">Text Message</td>
+<td align="left">Text message sent to the candidate</td>
+</tr>
+<tr>
+<td align="center">MPC</td>
+<td align="left">Action of presenting the candidate to a client</td>
+</tr>
+<tr>
+<td align="center">Interview</td>
+<td align="left">Noting the occurrence of an interview</td>
+</tr>
+<tr>
+<td align="center">Email</td>
+<td align="left">Email sent to the candidate</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p></br></p>
+<blockquote>
+<p>In addition, clicking the <code>New Note</code> button will open a slider with the same fields in order to create a new note for the selected candidate:</p>
+<p><img alt="New Note Creation" src="../img/admin/NewNote.PNG" /></p>
+</blockquote>
+<hr />
+<h4 id="assigned-projects">Assigned Projects</h4>
+<blockquote>
+<p>The <code>Assigned Projects</code> tab contains all the projects that the candidate is assigned to:</p>
+<p><img alt="Candidate Assigned Projects Tab" src="../img/admin/CandidateAssignedProjects.PNG" /></p>
+<p>Notice the format: <code>Project</code> - <code>Stage</code>.</p>
+<p>Upon clicking the <code>Edit</code> button, you will be able to view the following display:</p>
+<p><img alt="Candidate Assigned Projects Edit" src="../img/admin/CandidateAssignedProjectsEdit.PNG" /></p>
+<p>Notice that this is a mini-picker field, meaning all the projects within the application can be assigned to the candidate.</p>
+</blockquote>
+<hr />
+<h4 id="questions">Questions</h4>
+<blockquote>
+<p>The questions section contains various questions relevant to the candidate's prior experience, availability, and more:</p>
+<p><img alt="Candidate Questions Edit" src="../img/admin/CandidateQuestions.PNG" /></p>
+<p>The fields are as follows:</p>
+</blockquote>
+<ul>
+<li>What position are you interested in?</li>
+<li>Which projects do you have experience with?</li>
+<li>Which of the following company types do you have experience working with?</li>
+<li>How soon are you available to start working?</li>
+<li>Are you still in the job market?</li>
+<li>Do you have other opportunities or job offers you are considering?</li>
+<li>Date answered</li>
+</ul>
+
+<blockquote>
+<p>Pressing the <code>Send Questions to Candidate</code> sends an email to the candidate in the following template:
+<img alt="Candidate Questions Email Template" src="../img/admin/QuestionsEmailTemplate.PNG" /></p>
+</blockquote>
+<p></br></p>
+<blockquote>
+<p>The candidate will view the following page once he/she clicks <code>Get Started</code>:</p>
+<p><img alt="Candidate-side Questions" src="../img/admin/CandidateSideQuestions.PNG" /></p>
+</blockquote>
+<hr />
+<h4 id="logs">Logs</h4>
+<blockquote>
+<p>The logs section lists all the activities involving the candidate:</p>
+<p><img alt="Candidate Logs" src="../img/admin/CandidateLog.PNG" /></p>
+<p>The columns are as follows:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Field</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Title</td>
+<td align="left">Action type of the log</td>
+</tr>
+<tr>
+<td align="center">Content</td>
+<td align="left">Description of the log, stating the author of the action and the recipient</td>
+</tr>
+<tr>
+<td align="center">Time &amp; Date</td>
+<td align="left">Timestamp of when the event was logged</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<hr />
+<h4 id="profile">Profile</h4>
+<blockquote>
+<p>The last tab in the candidate edit page renders the candidate's profile formatted by TeamBldr:</p>
+<p><img alt="Candidate Profile View" src="../img/admin/CandidateProfileView.PNG" /></p>
+<p>This profile has information that accumulates all of the candidate's information into a single page.</p>
+</blockquote>
+<hr />
+<!-- Projects Section -->
+
+<h2 id="projects_1">Projects</h2>
+<blockquote>
+<p>Project is the other main entity within the application. It is a client-side entity that candidates can be associated with.</p>
+<p>From the <a href="./#projects"><code>Projects</code></a> section in the sidebar, pressing <code>Dashboard</code> will take you to the client's view of the application. Please see the <a href="client-guide">Client-side Guide</a> for more information about the client-side view.</p>
+<p>Clicking the <code>Edit</code> will take your to the project edit page:</p>
+<p><img alt="Project Edit" src="../img/admin/ProjectEdit.PNG" /></p>
+</blockquote>
+<hr />
+<h3 id="candidates_2">Candidates</h3>
+<blockquote>
+<p>The default tab will be the <code>Candidates</code> tab, which handles the candidate-project <code>Association</code> within the application. Because this is a very detailed component within the project edit, there will be a separate section dedicated to <a href="./#association">Association</a>.</p>
+</blockquote>
+<hr />
+<h3 id="project-information">Project Information</h3>
+<blockquote>
+<p>The <code>Project Information</code> tab will display the basic information about the project:</p>
+<p><img alt="Project Information" src="../img/admin/ProjectInformation.PNG" /></p>
+<p>The available fields for a project consist of:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Field</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Client Name</td>
+<td align="left">Name of the client</td>
+</tr>
+<tr>
+<td align="center">Project Name</td>
+<td align="left">Name of the project under the client</td>
+</tr>
+<tr>
+<td align="center">City</td>
+<td align="left">City where the project takes place</td>
+</tr>
+<tr>
+<td align="center">State</td>
+<td align="left">State where the project takes place</td>
+</tr>
+<tr>
+<td align="center">Qualifier</td>
+<td align="left">Qualifier for the project</td>
+</tr>
+<tr>
+<td align="center">Company Type</td>
+<td align="left">Type of company</td>
+</tr>
+<tr>
+<td align="center">Project Type</td>
+<td align="left">Type of project</td>
+</tr>
+<tr>
+<td align="center">Website</td>
+<td align="left">Website of the project</td>
+</tr>
+<tr>
+<td align="center">Category</td>
+<td align="left">Category of the project</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p></br></p>
+<blockquote>
+<p>There are different values for the <code>Company Type</code>, <code>Project Type</code>, and <code>Category</code>:</p>
+</blockquote>
+<p><code>Company Types</code>:</p>
+<ul>
+<li>General Contractor</li>
+<li>Joint Venture</li>
+<li>Design</li>
+<li>Owner</li>
+<li>Sub-Contractor</li>
+</ul>
+
+<p><code>Project Types</code>:</p>
+<ul>
+<li>Light Rail</li>
+<li>HighWay</li>
+<li>Bridge</li>
+<li>Water</li>
+<li>Airport</li>
+<li>Stadium</li>
+<li>Building</li>
+<li>High Speed</li>
+<li>Tunnels & Underground</li>
+<li>Other</li>
+</ul>
+
+<blockquote>
+<p><i>Selecting <code>Other</code> will prompt a text field to input the project type value.</i></p>
+</blockquote>
+<p><code>Category</code>:</p>
+<blockquote>
+<p>The categories are as defined in the <a href="./#projects">Project Sidebar</a> section.</p>
+</blockquote>
+<hr />
+<h3 id="point-of-contact">Point of Contact</h3>
+<blockquote>
+<p>This sections contains the basic information about the main point of contact designated for this project:</p>
+<p><img alt="Project Point Of Contact" src="../img/admin/ProjectPointOfContact.PNG" /></p>
+</blockquote>
+<p>The fields are:</p>
+<ul>
+<li>First Name</li>
+<li>Last Name</li>
+<li>Email</li>
+</ul>
+
+<hr />
+<h3 id="orders">Orders</h3>
+<blockquote>
+<p>This section includes any orders created under the project:</p>
+<p><img alt="Project Order" src="../img/admin/ProjectOrder.PNG" /></p>
+<p>At the right-side of the table, there is an <code>Edit</code> button to edit details about that order:</p>
+<p><img alt="Project Order Edit Button" src="../img/admin/ProjectOrderEditButton.PNG" /></p>
+<p>Clicking the edit will allow the admin to edit details about the order:</p>
+<p><img alt="Project Order Edit" src="../img/admin/ProjectOrderEdit.PNG" /></p>
+<p>Details about the orders can be found in the <a href="../client-guide/#orders">Client-side Orders</a> section</p>
+</blockquote>
+<hr />
+<h3 id="logs_1">Logs</h3>
+<blockquote>
+<p>Similar to the <a href="./#logs">Candidate Logs</a>, the project logs section has all the activities related to the project:</p>
+<p><img alt="Project Log" src="../img/admin/ProjectLog.PNG" /></p>
+</blockquote>
+<hr />
+<h3 id="project-dashboard">Project Dashboard</h3>
+<blockquote>
+<p>The blue <code>Project Name Dashboard</code> button leads to the client-side of the application. Details about this portion of the application can be found in the <a href="../client-guide/">Client-side Section</a>.</p>
+</blockquote>
+<hr />
+<!-- Assoication Section> -->
+
+<h2 id="association">Association</h2>
+<blockquote>
+<p>This section covers the candidate-project association as mentioned by the initial <a href="./#candidates_2">Projects Section</a>. This is where candidates can be added to a specific project or order, for the clients to be able to see whose candidates have been associated. Here is the page again as a refresher:</p>
+<p><img alt="Project Edit" src="../img/admin/ProjectEdit.PNG" /></p>
+<p>The top table represents the list of candidates, grouped by the candidate's categories. The categories are the criteria defined in the <a href="./#candidates">Candidates</a> section.</p>
+<p><img alt="Project Association Candidates" src="../img/admin/ProjectAssociationCandidates.PNG" /></p>
+<p>The fields displayed for each candidates are:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Field</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">First Name</td>
+<td align="left">First name of the candidate</td>
+</tr>
+<tr>
+<td align="center">Last Name</td>
+<td align="left">Last name of the candidate</td>
+</tr>
+<tr>
+<td align="center">Position</td>
+<td align="left">Position of the candidate</td>
+</tr>
+<tr>
+<td align="center">Relocation</td>
+<td align="left">Areas where the candidate is willing to relocate</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p></br></p>
+<blockquote>
+<p>General is the default candidate category that loads upon navigating to this page.</p>
+<p>Notice the open checkbox for each of the candidates. Upon clicking the checkbox, the down <code>v</code> arrow becomes enabled:</p>
+<p><img alt="Project Association Candidates Selected" src="../img/admin/ProjectAssociationCandidatesSelected.PNG" /></p>
+<p>This indicates that the selected candidates can be added to the current project.</p>
+<p>Upon clicking the <code>v</code> button, the candidates will be moved to the bottom table, and the <code>Save Changes</code> button becomes available.</p>
+<p><img alt="Project Association Candidates Associated" src="../img/admin/ProjectAssociationCandidatesAssociated.PNG" /></p>
+<p>Once you click the button, the candidates will be associated and will stay in the bottom table. This indicates that the candidates have been successfully associated to the project:</p>
+<p><img alt="Project Associated Candidate" src="../img/admin/ProjectAssociatedCandidate.PNG" /></p>
+<p>You'll notice from the above image that after a successful association, several buttons and fields are generated per candidate row. The new fields are:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Field</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Date Added</td>
+<td align="left">Date in which the candidate was associated to the project</td>
+</tr>
+<tr>
+<td align="center">Stage</td>
+<td align="left">The current stage in which the candidate is in within the interview pipeline. Set to "Pending" by default</td>
+</tr>
+<tr>
+<td align="center">Work Experience</td>
+<td align="left">Displays candidate's work experience status, to indicate whether or not their profiles will seem complete or sparse</td>
+</tr>
+</tbody>
+</table>
+<p>Note the <code>?</code> Tooltip available next to the <code>Work Experience</code> column. Feel free to hover over the tooltip to view more detailed information about the purpose of the field.</p>
+<p>For each candidate associated, 3 action button will also be generated:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Field</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Edit</td>
+<td align="left">Displays a pop-up that allows the admin to set candidate's position and pay rate</td>
+</tr>
+<tr>
+<td align="center">Manage Profile</td>
+<td align="left">Allows the admin to unlock the candidate's profile in advance</td>
+</tr>
+<tr>
+<td align="center">Reset Date Added</td>
+<td align="left">Restarts the 48-hour rule for the candidate</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p></br>
+For more information about some of these fields and the next steps in the association process, please check out the <a href="../client-guide/">client-side</a> documentation.</p>
+<p>Lastly, at the bottom of the page, you might notice the different tabs:</p>
+<blockquote>
+<p><img alt="Project Association Order Tabs" src="../img/admin/ProjectAssociationOrderTabs.PNG" /></p>
+<p>Each of the tabs (with the exception of <code>General</code>) correspond to an order that has been created for the client. Please view the <a href="../client-guide/#orders">Orders</a> section for more information about the details of what constitues an order.</p>
+<p>When switching to any of the orders tab, one additional category becomes available in the drop down: <code>Recommended</code>.</p>
+<p><img alt="Recommended Candidates" src="../img/admin/RecommendedCandidates.PNG" /></p>
+<p>The <code>Recommended</code> category loads candidates whose profile matches the details of the selected order. Notice from the above image that the position matches the order selected and is accompanied by a match score. This is a rough measure of how well the candidate would fit with this order.</p>
+<p>For a detailed explanation of what criteria go into creating this match, please view the <a href="../tech/#matching-algorithm">Matching Algorithm</a> section.</p>
+</blockquote>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../client-guide/" class="btn btn-neutral float-right" title="Client-side Guide">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../about/" class="btn btn-neutral" title="About"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../about/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../client-guide/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
